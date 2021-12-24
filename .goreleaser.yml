@@ -1,0 +1,103 @@
+before:
+  hooks:
+    - go mod download
+    - go mod tidy
+builds:
+-
+  id: gh-star-history-linux
+  env:
+    - CGO_ENABLED=0
+  goos:
+    - linux
+  goarch:
+    - amd64
+  ldflags:
+    - -s -w -X github.com/k1LoW/gh-star-history.version={{.Version}} -X github.com/k1LoW/gh-star-history.commit={{.FullCommit}} -X github.com/k1LoW/gh-star-history.date={{.Date}} -X github.com/k1LoW/gh-star-history/version.Version={{.Version}}
+-
+  id: gh-star-history-darwin
+  env:
+    - CGO_ENABLED=0
+  goos:
+    - darwin
+  goarch:
+    - amd64
+    - arm64
+  ldflags:
+    - -s -w -X github.com/k1LoW/gh-star-history.version={{.Version}} -X github.com/k1LoW/gh-star-history.commit={{.FullCommit}} -X github.com/k1LoW/gh-star-history.date={{.Date}} -X github.com/k1LoW/gh-star-history/version.Version={{.Version}}
+-
+  id: gh-star-history-windows
+  env:
+    - CGO_ENABLED=0
+  goos:
+    - windows
+  goarch:
+    - amd64
+  ldflags:
+    - -s -w -X github.com/k1LoW/gh-star-history.version={{.Version}} -X github.com/k1LoW/gh-star-history.commit={{.FullCommit}} -X github.com/k1LoW/gh-star-history.date={{.Date}} -X github.com/k1LoW/gh-star-history/version.Version={{.Version}}
+archives:
+-
+  id: gh-star-history-archive
+  name_template: '{{ .ProjectName }}_v{{ .Version }}_{{ .Os }}_{{ .Arch }}{{ if .Arm }}v{{ .Arm }}{{ end }}'
+  format_overrides:
+    - goos: darwin
+      format: zip
+  files:
+    - CREDITS
+    - README.md
+    - CHANGELOG.md
+-
+  id: gh-star-history-binary
+  name_template: '{{ .Binary }}_v{{ .Version }}_{{ .Os }}_{{ .Arch }}{{ if .Arm }}v{{ .Arm }}{{ end }}'
+  format: binary
+checksum:
+  name_template: 'checksums.txt'
+snapshot:
+  name_template: "{{ .Version }}-next"
+changelog:
+  skip: true
+dockers:
+  -
+    goos: linux
+    goarch: amd64
+    image_templates:
+      - 'ghcr.io/k1low/gh-star-history:v{{ .Version }}'
+      - 'ghcr.io/k1low/gh-star-history:latest'
+    dockerfile: Dockerfile
+    build_flag_templates:
+      - "--pull"
+      - "--label=org.opencontainers.image.created={{.Date}}"
+      - "--label=org.opencontainers.image.name={{.ProjectName}}"
+      - "--label=org.opencontainers.image.revision={{.FullCommit}}"
+      - "--label=org.opencontainers.image.version={{.Version}}"
+      - "--label=org.opencontainers.image.source=https://github.com/k1LoW/gh-star-history"
+    extra_files:
+      - scripts/entrypoint.sh
+brews:
+  -
+    name: gh-star-history
+    ids:
+      - gh-star-history-archive
+    tap:
+      owner: k1LoW
+      name: homebrew-tap
+    commit_author:
+      name: k1LoW
+      email: k1lowxb@gmail.com
+    homepage: https://github.com/k1LoW/gh-star-history
+    description: Show star history of repositories.
+    license: MIT
+nfpms:
+  - id: gh-star-history-nfpms
+    file_name_template: "{{ .ProjectName }}_{{ .Version }}-1_{{ .Arch }}"
+    builds:
+      - gh-star-history-linux
+    homepage: https://github.com/k1LoW/gh-star-history
+    maintainer: Ken'ichiro Oyama <k1lowxb@gmail.com>
+    description: Show star history of repositories.
+    license: MIT
+    formats:
+      - apk
+      - deb
+      - rpm
+    bindir: /usr/bin
+    epoch: 1
