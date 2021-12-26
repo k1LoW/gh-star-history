@@ -53,7 +53,13 @@ Aggregate stars of cli/survey ...
 
 ## Install
 
-`gh-grep` can be installed as a standalone command or as [a GitHub CLI extension](https://cli.github.com/manual/gh_extension)
+`gh-star-history` can be installed as a standalone command or as [a GitHub CLI extension](https://cli.github.com/manual/gh_extension)
+
+### Install as a GitHub CLI extension
+
+``` console
+$ gh extension install k1LoW/gh-star-history
+```
 
 ### Install as a standalone command
 

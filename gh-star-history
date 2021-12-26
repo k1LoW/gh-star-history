@@ -9,17 +9,17 @@ arch="$(uname -m)"
 
 exe=""
 
-if uname -a | star-history Msys > /dev/null; then
+if uname -a | grep Msys > /dev/null; then
   if [ $arch = "x86_64" ]; then
     exe="gh-star-history_${tag}_windows_amd64.exe"
   fi
-elif uname -a | star-history Darwin > /dev/null; then
+elif uname -a | grep Darwin > /dev/null; then
   if [ $arch = "x86_64" ]; then
     exe="gh-star-history_${tag}_darwin_amd64"
   elif [ $arch = "arm64" ]; then
     exe="gh-star-history_${tag}_darwin_arm64"
   fi
-elif uname -a | star-history Linux > /dev/null; then
+elif uname -a | grep Linux > /dev/null; then
   if [ $arch = "x86_64" ]; then
     exe="gh-star-history_${tag}_linux_amd64"
   fi
