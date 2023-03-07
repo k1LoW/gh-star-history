@@ -16,5 +16,5 @@ require (
 	github.com/zhangyunhao116/fastrand v0.1.0 // indirect
 	github.com/zhangyunhao116/sbconv v0.2.1 // indirect
 	github.com/zhangyunhao116/wyhash v0.3.2 // indirect
-	golang.org/x/crypto v0.0.0-20210817164053-32db794688a5 // indirect
+	golang.org/x/crypto v0.1.0 // indirect
 )
