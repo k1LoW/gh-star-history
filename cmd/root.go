@@ -30,9 +30,9 @@ import (
 	"os"
 	"time"
 
-	"github.com/google/go-github/v40/github"
+	"github.com/google/go-github/v50/github"
 	"github.com/k1LoW/gh-star-history/version"
-	"github.com/k1LoW/go-github-client/v40/factory"
+	"github.com/k1LoW/go-github-client/v50/factory"
 	"github.com/spf13/cobra"
 	"github.com/zhangyunhao116/skipmap"
 )
@@ -92,7 +92,7 @@ var rootCmd = &cobra.Command{
 			}
 		}
 
-		m := skipmap.NewInt64()
+		m := skipmap.NewInt64[int]()
 
 		for _, repo := range repos {
 			cmd.PrintErrf("Aggregate stars of %s/%s ...\n", owner, repo)
@@ -118,7 +118,7 @@ var rootCmd = &cobra.Command{
 					}
 					v, ok := m.Load(k)
 					if ok {
-						m.Store(k, v.(int)+1)
+						m.Store(k, v+1)
 					} else {
 						m.Store(k, 1)
 					}
@@ -130,8 +130,8 @@ var rootCmd = &cobra.Command{
 			}
 		}
 
-		m.Range(func(k int64, v interface{}) bool {
-			_, _ = fmt.Fprintf(os.Stdout, "%s\t%d\n", time.Unix(k, 0).Format(f), v.(int))
+		m.Range(func(k int64, v int) bool {
+			_, _ = fmt.Fprintf(os.Stdout, "%s\t%d\n", time.Unix(k, 0).Format(f), v)
 			return true
 		})
 
