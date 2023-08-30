@@ -1,7 +1,7 @@
 package version
 
-// Name for this
+// Name for this.
 const Name string = "gh-star-history"
 
-// Version for this
-var Version = "dev"
+// Version for this.
+var Version = "0.2.0"
