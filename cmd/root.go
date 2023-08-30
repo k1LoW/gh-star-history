@@ -125,7 +125,7 @@ var rootCmd = &cobra.Command{
 				if res.NextPage == 0 {
 					break
 				}
-				page += 1
+				page = res.NextPage
 			}
 		}
 
@@ -140,7 +140,7 @@ var rootCmd = &cobra.Command{
 
 func Execute() {
 	rootCmd.SetOut(os.Stdout)
-	rootCmd.SetErr(os.Stdin)
+	rootCmd.SetErr(os.Stderr)
 
 	log.SetOutput(io.Discard)
 	if env := os.Getenv("DEBUG"); env != "" {
