@@ -1,3 +1,9 @@
+## [v0.2.1](https://github.com/k1LoW/gh-star-history/compare/v0.2.0...v0.2.1) - 2023-08-30
+### Fix bug 🐛
+- Fix SetErr by @k1LoW in https://github.com/k1LoW/gh-star-history/pull/5
+### Other Changes
+- Setup tagpr by @k1LoW in https://github.com/k1LoW/gh-star-history/pull/4
+
 ## [v0.2.0](https://github.com/k1LoW/gh-star-history/compare/v0.1.0...v0.2.0) (2023-03-10)
 
 * Update pkgs [#3](https://github.com/k1LoW/gh-star-history/pull/3) ([k1LoW](https://github.com/k1LoW))
