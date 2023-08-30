@@ -45,7 +45,6 @@ var (
 	perYear  bool
 )
 
-// rootCmd represents the base command when called without any subcommands
 var rootCmd = &cobra.Command{
 	Use:          "gh-star-history",
 	Short:        "Show star history of repositories",
