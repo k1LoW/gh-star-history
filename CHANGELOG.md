@@ -1,3 +1,7 @@
+## [v0.2.2](https://github.com/k1LoW/gh-star-history/compare/v0.2.1...v0.2.2) - 2023-10-12
+### Other Changes
+- Bump golang.org/x/net from 0.8.0 to 0.17.0 by @dependabot in https://github.com/k1LoW/gh-star-history/pull/7
+
 ## [v0.2.1](https://github.com/k1LoW/gh-star-history/compare/v0.2.0...v0.2.1) - 2023-08-30
 ### Fix bug 🐛
 - Fix SetErr by @k1LoW in https://github.com/k1LoW/gh-star-history/pull/5
