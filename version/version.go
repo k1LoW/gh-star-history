@@ -4,4 +4,4 @@ package version
 const Name string = "gh-star-history"
 
 // Version for this.
-var Version = "0.2.1"
+var Version = "0.2.2"
