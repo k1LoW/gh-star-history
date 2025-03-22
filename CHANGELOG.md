@@ -1,3 +1,7 @@
+## [v0.2.6](https://github.com/k1LoW/gh-star-history/compare/v0.2.5...v0.2.6) - 2025-03-22
+### Other Changes
+- Bump golang.org/x/net from 0.23.0 to 0.36.0 by @dependabot in https://github.com/k1LoW/gh-star-history/pull/16
+
 ## [v0.2.5](https://github.com/k1LoW/gh-star-history/compare/v0.2.4...v0.2.5) - 2025-03-22
 ### Other Changes
 - Bump golang.org/x/crypto from 0.21.0 to 0.31.0 by @dependabot in https://github.com/k1LoW/gh-star-history/pull/13
