@@ -1,6 +1,6 @@
 module github.com/k1LoW/gh-star-history
 
-go 1.20
+go 1.23.7
 
 require (
 	github.com/google/go-github/v50 v50.1.0
