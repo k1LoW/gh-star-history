@@ -1,3 +1,10 @@
+## [v0.2.7](https://github.com/k1LoW/gh-star-history/compare/v0.2.6...v0.2.7) - 2025-11-21
+### Other Changes
+- chore(deps): bump the dependencies group with 3 updates by @dependabot[bot] in https://github.com/k1LoW/gh-star-history/pull/25
+- Bump golang.org/x/oauth2 from 0.0.0-20180821212333-d2e6202438be to 0.27.0 by @dependabot[bot] in https://github.com/k1LoW/gh-star-history/pull/20
+- Bump golang.org/x/crypto from 0.35.0 to 0.45.0 by @dependabot[bot] in https://github.com/k1LoW/gh-star-history/pull/23
+- chore(deps): bump the dependencies group with 3 updates by @dependabot[bot] in https://github.com/k1LoW/gh-star-history/pull/26
+
 ## [v0.2.6](https://github.com/k1LoW/gh-star-history/compare/v0.2.5...v0.2.6) - 2025-03-22
 ### Other Changes
 - Bump golang.org/x/net from 0.23.0 to 0.36.0 by @dependabot in https://github.com/k1LoW/gh-star-history/pull/16
