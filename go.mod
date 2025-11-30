@@ -4,7 +4,7 @@ go 1.25.0
 
 require (
 	github.com/google/go-github/v50 v50.2.0
-	github.com/k1LoW/go-github-client/v50 v50.2.20
+	github.com/k1LoW/go-github-client/v50 v50.2.21
 	github.com/spf13/cobra v1.10.1
 	github.com/zhangyunhao116/skipmap v0.10.1
 )
