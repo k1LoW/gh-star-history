@@ -1,3 +1,13 @@
+## [v0.2.8](https://github.com/k1LoW/gh-star-history/compare/v0.2.7...v0.2.8) - 2026-09-29
+### Other Changes
+- chore(deps): bump the dependencies group across 1 directory with 2 updates by @dependabot[bot] in https://github.com/k1LoW/gh-star-history/pull/28
+- chore(deps): bump the dependencies group with 2 updates by @dependabot[bot] in https://github.com/k1LoW/gh-star-history/pull/29
+- chore(deps): bump the dependencies group with 3 updates by @dependabot[bot] in https://github.com/k1LoW/gh-star-history/pull/31
+- chore(deps): bump github.com/cloudflare/circl from 1.6.1 to 1.6.3 by @dependabot[bot] in https://github.com/k1LoW/gh-star-history/pull/32
+- chore(deps): bump the dependencies group with 3 updates by @dependabot[bot] in https://github.com/k1LoW/gh-star-history/pull/33
+- ci: generate CREDITS with gocredits v1.0.0 from a make target by @k1LoW in https://github.com/k1LoW/gh-star-history/pull/36
+- chore(deps): bump the dependencies group across 1 directory with 5 updates by @dependabot[bot] in https://github.com/k1LoW/gh-star-history/pull/35
+
 ## [v0.2.7](https://github.com/k1LoW/gh-star-history/compare/v0.2.6...v0.2.7) - 2025-11-21
 ### Other Changes
 - chore(deps): bump the dependencies group with 3 updates by @dependabot[bot] in https://github.com/k1LoW/gh-star-history/pull/25
