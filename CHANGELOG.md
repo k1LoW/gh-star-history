@@ -1,3 +1,7 @@
+## [v0.2.9](https://github.com/k1LoW/gh-star-history/compare/v0.2.8...v0.2.9) - 2026-09-29
+### Other Changes
+- chore(deps): bump golang.org/x/crypto from 0.45.0 to 0.52.0 by @dependabot[bot] in https://github.com/k1LoW/gh-star-history/pull/37
+
 ## [v0.2.8](https://github.com/k1LoW/gh-star-history/compare/v0.2.7...v0.2.8) - 2026-09-29
 ### Other Changes
 - chore(deps): bump the dependencies group across 1 directory with 2 updates by @dependabot[bot] in https://github.com/k1LoW/gh-star-history/pull/28
